@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Students Management System</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="/global_assets/js/main/jquery.min.js"></script>
+    <script src="/global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark navbar-static">
+        <div class="navbar-brand ml-2 ml-lg-0">
+            <a href="index.html" class="d-inline-block">
+                <img src="/global_assets/images/logo_light.png" alt="">
+            </a>
+        </div>
+        <div class="d-flex justify-content-end align-items-center ml-auto">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item">
+                    <a class="navbar-nav-link" asp-area="Identity" asp-page="/Account/Register">
+                        <i class="icon-lifebuoy"></i>
+                        <span class="d-none d-lg-inline-block ml-2">Support</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-nav-link" asp-area="Identity" asp-page="/Account/Register">
+                        <i class="icon-user-plus"></i>
+                        <span class="d-none d-lg-inline-block ml-2">Register</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-nav-link" asp-area="Identity" asp-page="/Account/Login">
+                        <i class="icon-user-lock"></i>
+                        <span class="d-none d-lg-inline-block ml-2">Login</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="content-wrapper">
+            <div class="content-inner">
+                <div class="content d-flex justify-content-center align-items-center">
+                    @RenderBody()
+
+                </div>
+                <!-- Footer -->
+                @Html.Partial("_Footer")
+            </div>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

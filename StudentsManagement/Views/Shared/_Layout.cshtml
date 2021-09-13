@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("_Header")
+
+<body>
+    <!-- Main navbar -->
+    @Html.Partial("_MainNavbar")
+    <!-- /main navbar -->
+    <!-- Page content -->
+    <div class="page-content">
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+            <!-- Sidebar content -->
+            @Html.Partial("_SideMenu")
+            <!-- /sidebar content -->
+        </div>
+        <!-- /main sidebar -->
+        <!-- Main content -->
+        <div class="content-wrapper">
+            <!-- Inner content -->
+            <div class="content-inner">
+                <!-- Page header -->
+                @Html.Partial("_PageHeader")
+                <!-- Content area -->
+                @RenderBody()
+                <!-- Footer -->
+                @Html.Partial("_Footer")
+            </div>
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
