@@ -249,6 +249,76 @@ namespace StudentsManagement.Data.Migrations
                     b.ToTable("Course");
                 });
 
+            modelBuilder.Entity("Students.Business.Models.Lecturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CitizenshipId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CountyId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DepartmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EducationLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmailAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("EthnicityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GenderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TelephoneNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CitizenshipId");
+
+                    b.HasIndex("CountryId");
+
+                    b.HasIndex("CountyId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("DepartmentId");
+
+                    b.HasIndex("EducationLevelId");
+
+                    b.HasIndex("EthnicityId");
+
+                    b.HasIndex("GenderId");
+
+                    b.ToTable("Lecturers");
+                });
+
             modelBuilder.Entity("Students.Business.Models.StudentsModel", b =>
                 {
                     b.Property<int>("Id")
@@ -293,6 +363,50 @@ namespace StudentsManagement.Data.Migrations
                     b.HasIndex("CourseId");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Students.Business.Models.SystemCode", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SystemCodes");
+                });
+
+            modelBuilder.Entity("Students.Business.Models.SystemCodeDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OrderNo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SystemCodeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SystemCodeId");
+
+                    b.ToTable("SystemCodeDetails");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -346,6 +460,41 @@ namespace StudentsManagement.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Students.Business.Models.Lecturer", b =>
+                {
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "Citizenship")
+                        .WithMany()
+                        .HasForeignKey("CitizenshipId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "County")
+                        .WithMany()
+                        .HasForeignKey("CountyId");
+
+                    b.HasOne("Students.Business.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "Department")
+                        .WithMany()
+                        .HasForeignKey("DepartmentId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "EducationLevel")
+                        .WithMany()
+                        .HasForeignKey("EducationLevelId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "Ethnicity")
+                        .WithMany()
+                        .HasForeignKey("EthnicityId");
+
+                    b.HasOne("Students.Business.Models.SystemCodeDetail", "Gender")
+                        .WithMany()
+                        .HasForeignKey("GenderId");
+                });
+
             modelBuilder.Entity("Students.Business.Models.StudentsModel", b =>
                 {
                     b.HasOne("Students.Business.Models.County", "County")
@@ -357,6 +506,15 @@ namespace StudentsManagement.Data.Migrations
                     b.HasOne("Students.Business.Models.Course", "Course")
                         .WithMany()
                         .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Students.Business.Models.SystemCodeDetail", b =>
+                {
+                    b.HasOne("Students.Business.Models.SystemCode", "SystemCode")
+                        .WithMany("SystemCodeDetails")
+                        .HasForeignKey("SystemCodeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

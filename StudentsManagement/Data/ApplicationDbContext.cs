@@ -14,6 +14,12 @@ namespace StudentsManagement.Data
         {
         }
 
+        public DbSet<SystemCode> SystemCodes { get; set; }
+
+        public DbSet<SystemCodeDetail> SystemCodeDetails { get; set; }
+
+        public DbSet<Lecturer> Lecturers { get; set; }
+
         public DbSet<StudentsModel> Students { get; set; }
 
         public DbSet<County> County { get; set; }

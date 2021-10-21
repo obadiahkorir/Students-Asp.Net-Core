@@ -21,7 +21,7 @@ namespace Students.Business.ViewModels
         [DisplayName("Last Name")]
         public string LastName { get; set; }
 
-        [DisplayName("Last Name")]
+        [DisplayName("Other Name")]
         public string OtherName { get; set; }
 
         [DisplayName("Student Name")]

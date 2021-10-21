@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Students.Business.Models
@@ -8,6 +9,8 @@ namespace Students.Business.Models
     {
          public int Id { get; set; }
 
+
+        [DisplayName("Course Name")]
         public string CourseName { get; set; }
     }
 }

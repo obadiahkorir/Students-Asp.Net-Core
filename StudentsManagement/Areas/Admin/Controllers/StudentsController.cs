@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Students.Business.Common;
 using Students.Business.Models;
 using Students.Business.ViewModels;
 using StudentsManagement.Data;
+
+
 using X.PagedList;
 
 namespace StudentsManagement.Areas.Admin
@@ -19,10 +20,10 @@ namespace StudentsManagement.Areas.Admin
     public class StudentsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         public StudentsController(ApplicationDbContext context)
         {
             _context = context;
+        
         }
 
         // GET: Admin/Students
@@ -30,14 +31,16 @@ namespace StudentsManagement.Areas.Admin
         {
             var data =  _context.Students.Include(s => s.County).Include(s => s.Course);
 
-            var pageSize = vm.PageSize ?? 10;
+            var pageSize = vm.PageSize ?? 100;
             var page = vm.Page ?? 1;
 
+            ViewBag.PageSize = this.GetPager(vm.PageSize);
+
             vm.Students = data.ToPagedList(page, pageSize);
-            //ViewBag.PageSize = this.GetPager(vm.PageSize);
 
             return View(vm);
         }
+
 
         // GET: Admin/Students/Details/5
         public async Task<IActionResult> Details(int? id) 

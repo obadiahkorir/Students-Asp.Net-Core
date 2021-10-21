@@ -33,8 +33,22 @@ using Students.Business.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Projects\StudentsManagement\StudentsManagement\Views\_ViewImports.cshtml"
+using Highsoft.Web.Mvc.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Projects\StudentsManagement\StudentsManagement\Views\_ViewImports.cshtml"
+using Highsoft.Web.Mvc.Charts.Rendering;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e5866be21b150bd752ff0889c7eb82b0489ce43c", @"/Views/Shared/_Dashboard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c81e29681ec9e94af4001244cd6c02aca1d14db3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b93d33d92612bf46c6d2ffbc118688910d19f505", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Dashboard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("value", "val1", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -150,7 +164,7 @@ using Students.Business.Models;
                     <div class=""header-elements"">
                         <select class=""form-con");
             WriteLiteral("trol custom-select\" id=\"select_date\">\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c8868", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c9254", async() => {
                 WriteLiteral("June, 29 - July, 5");
             }
             );
@@ -166,7 +180,7 @@ using Students.Business.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c10065", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c10451", async() => {
                 WriteLiteral("June, 22 - June 28");
             }
             );
@@ -182,7 +196,7 @@ using Students.Business.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c11263", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c11649", async() => {
                 WriteLiteral("June, 15 - June, 21");
             }
             );
@@ -201,7 +215,7 @@ using Students.Business.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c12773", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e5866be21b150bd752ff0889c7eb82b0489ce43c13159", async() => {
                 WriteLiteral("June, 8 - June, 14");
             }
             );

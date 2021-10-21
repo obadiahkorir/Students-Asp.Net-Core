@@ -33,8 +33,22 @@ using Students.Business.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Projects\StudentsManagement\StudentsManagement\Views\_ViewImports.cshtml"
+using Highsoft.Web.Mvc.Charts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Projects\StudentsManagement\StudentsManagement\Views\_ViewImports.cshtml"
+using Highsoft.Web.Mvc.Charts.Rendering;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5e32b1873fe1f37cb4d1ee6f22235f5b9d151c78", @"/Views/Shared/_MainNavbar.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c81e29681ec9e94af4001244cd6c02aca1d14db3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b93d33d92612bf46c6d2ffbc118688910d19f505", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__MainNavbar : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

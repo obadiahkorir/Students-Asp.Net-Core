@@ -1,0 +1,9 @@
+C:\Projects\StudentsManagement\Students.Services\bin\Debug\netcoreapp3.1\Students.Services.deps.json
+C:\Projects\StudentsManagement\Students.Services\bin\Debug\netcoreapp3.1\Students.Services.dll
+C:\Projects\StudentsManagement\Students.Services\bin\Debug\netcoreapp3.1\Students.Services.pdb
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.AssemblyInfoInputs.cache
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.AssemblyInfo.cs
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.csproj.CoreCompileInputs.cache
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.dll
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.pdb
+C:\Projects\StudentsManagement\Students.Services\obj\Debug\netcoreapp3.1\Students.Services.csprojAssemblyReference.cache

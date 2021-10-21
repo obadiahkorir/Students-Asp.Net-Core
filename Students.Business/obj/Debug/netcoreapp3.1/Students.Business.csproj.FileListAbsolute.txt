@@ -1,9 +1,9 @@
 C:\Projects\StudentsManagement\Students.Business\bin\Debug\netcoreapp3.1\Students.Business.deps.json
 C:\Projects\StudentsManagement\Students.Business\bin\Debug\netcoreapp3.1\Students.Business.dll
 C:\Projects\StudentsManagement\Students.Business\bin\Debug\netcoreapp3.1\Students.Business.pdb
-C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.csprojAssemblyReference.cache
 C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.AssemblyInfoInputs.cache
 C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.AssemblyInfo.cs
 C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.csproj.CoreCompileInputs.cache
 C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.dll
 C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.pdb
+C:\Projects\StudentsManagement\Students.Business\obj\Debug\netcoreapp3.1\Students.Business.csprojAssemblyReference.cache
